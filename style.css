@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Fira Sans", Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 0;
+    min-height: 100vh;
+    color: #4b3a2f;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.contenedor {
+    background-color: rgba(188, 175, 160, 0.6);
+    padding: 40px;
+    max-width: 1300px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+header {
+    background-color: #e5d1ba;
+    padding: 20px;
+    color: #3b2e24;
+}
+
+
+
+
+
+/* Navegador */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #4b3a2f;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #4b3a2f;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #3b2e24;
+}
+
+
+
+
+
+
+
+
+
+
+/* Imagen de Bienvenida  */
+.bienvenida, .productos, .contacto {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.bienvenida h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.ancho-imagen-con-texto {
+    width: 100%;
+}
+
+.imagen-con-texto {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.imagen-con-texto img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+.texto-sobre-imagen {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* Tarjetas de productos  */
+.productos {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.tarjetas-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.producto {
+    background-color: rgba(229, 209, 186, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.producto h3 {
+    font-size: 1rem;
+    color: #3b2e24;
+    margin-bottom: 8px;
+}
+
+.producto p {
+    font-size: 0.85rem;
+    color: #5f4b3e;
+}
+
+
+
+
+
+
+
+
+
+/* Formulario de contacto */
+.contacto form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: rgba(229, 209, 186, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.formulario-contacto h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #3b2e24;
+}
+
+.contacto label {
+    text-align: left;
+    font-weight: bold;
+    color: #4b3a2f;
+}
+
+.contacto input,
+.contacto textarea {
+    padding: 12px;
+    border: 1px solid #b9a89a;
+    border-radius: 6px;
+    background-color: #fffaf7;
+    color: #4b3a2f;
+    font-size: 1rem;
+}
+
+.contacto input::placeholder,
+.contacto textarea::placeholder {
+    color: #a08b7c;
+}
+
+.contacto button {
+    background-color: #6b4f3f;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contacto button:hover {
+    background-color: #8b6a55;
+}
+
+
+
+
+
+/* Footer */
+
+footer {
+    background-color: #4b3a2f;
+    color: #e5d1ba;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
